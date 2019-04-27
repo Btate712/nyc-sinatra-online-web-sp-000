@@ -46,7 +46,7 @@ class FiguresController < ApplicationController
   patch '/figures/:id' do
     figure = Figure.find(params[:id])
     figure.name = params[:figure][:name]
-
+    binding.pry
     figure.titles = []
     if params[:title][:name] != ""
       title = Title.create(params[:title][:name])
@@ -72,7 +72,7 @@ class FiguresController < ApplicationController
     end
 
     figure.save
-    binding.pry
+    
   end
 end
 
