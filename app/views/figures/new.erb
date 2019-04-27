@@ -6,8 +6,9 @@
 
   <h2>Titles</h2>
   <% @titles.each do |title| %>
-    <input type="checkbox" name="figure[title_ids][]" id="title_<% title.id %>"
-      value="Hello" />
+    <input type="checkbox" name="figure[title_ids][]" id="title_<% title.id %>">
+      <%= title.name %>
+    </input>
   <% end %>
 
   <h2>Create New Title:</h2>
