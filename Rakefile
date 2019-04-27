@@ -5,6 +5,6 @@ require 'sinatra/activerecord/rake'
 
 
 # Type `rake -T` on your command line to see the available rake tasks.
-def self.console
-  binding.pry
+task :console do
+  Pry.start
 end
