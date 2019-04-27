@@ -15,13 +15,19 @@ class LandmarksController < ApplicationController
     erb :'landmarks/show'
   end
 
-  post '/landmarks' do
-    @landmark = Landmark.create(params[:landmark])
-  end
-
   get '/landmarks/:id/edit' do
     @landmark = Landmark.find(params[:id])
 
     erb :'landmarks/edit'
+  end
+
+  post '/landmarks' do
+    @landmark = Landmark.create(params[:landmark])
+  end
+
+  patch '/landmarks/:id' do
+    @landmark = Landmark.find(params[:id])
+    binding.pry
+    @landmark.name = params[:]
   end
 end
