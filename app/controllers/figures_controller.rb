@@ -46,7 +46,8 @@ class FiguresController < ApplicationController
   patch '/figures/:id' do
     figure = Figure.find(params[:id])
     figure.name = params[:figure][:name]
-    binding.pry
+    figure.save
+    
     figure.titles = []
     if params[:title][:name] != ""
       title = Title.create(params[:title][:name])
@@ -70,8 +71,6 @@ class FiguresController < ApplicationController
         figure.landmarks << Landmark.find(landmark_id)
       end
     end
-
-    figure.save
 
   end
 end
