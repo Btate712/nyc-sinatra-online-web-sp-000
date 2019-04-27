@@ -10,6 +10,10 @@
       value="<% title.name %>" />
   <% end %>
 
+  <h2>Create New Title:</h2>
+  <label for="title_name">Name:</label>
+  <input type="text" name="title[name]" id="title_name" />
+
   <h2>Landmarks</h2>
   <% @landmarks.each do |landmark| %>
     <input type="checkbox" name="figure[landmark_ids][]" id="<% landmark.id %>"
@@ -17,10 +21,10 @@
   <% end %>
 
   <h2>Create New Landmark:</h2>
-  <label for="name">Name:</label>
+  <label for="landmark_name">Name:</label>
   <input type="text" name="landmark[name]" id="landmark_name" />
 
-  <label for="year">Year Completed:</label>
+  <label for="landmark_year_completed">Year Completed:</label>
   <input type="text" name="landmark[year_completed]" id="landmark_year_completed" />
 
   <input type="submit" name="submit" id="submit" value="Create New Figure" />
