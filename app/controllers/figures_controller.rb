@@ -18,6 +18,12 @@ class FiguresController < ApplicationController
     erb :'figures/show'
   end
 
+  get '/figures/:id/edit' do
+    @figure = Figure.find(params[:id])
+
+    erb :'figures/edit'
+  end
+
   post '/figures' do
     @figure = Figure.new(params[:figure])
     @figure.save
