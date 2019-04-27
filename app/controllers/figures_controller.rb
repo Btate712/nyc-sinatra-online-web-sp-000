@@ -20,7 +20,7 @@ class FiguresController < ApplicationController
       title = Title.new(params[:title])
       @figure.titles << title
     end
-    binding.pry
+
     redirect :"figure/#{@figure.id}"
   end
 end
