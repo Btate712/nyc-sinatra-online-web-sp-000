@@ -72,7 +72,7 @@ class FiguresController < ApplicationController
     end
 
     figure.save
-    
+
   end
 end
 
