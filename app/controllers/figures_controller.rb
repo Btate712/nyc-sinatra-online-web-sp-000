@@ -15,7 +15,10 @@ class FiguresController < ApplicationController
   post '/figures' do
     @figure = Figure.new(params[:figure])
     @figure.save
-    binding.pry
+
+    if params[:title]
+      binding.pry
+    end
     redirect :"figure/#{@figure.id}"
   end
 end
