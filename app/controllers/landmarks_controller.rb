@@ -33,6 +33,6 @@ class LandmarksController < ApplicationController
 
     @landmark.save
 
-    redirect '/landmarks/#{@landmark.id}'
+    redirect "/landmarks/#{@landmark.id}"
   end
 end
