@@ -7,6 +7,14 @@ class FiguresController < ApplicationController
   end
 
   post '/figures' do
-    binding.pry
+    @figure = Figure.new(params[:figure])
+
+    erb :"figure/#{@figure.id}"
   end
 end
+
+# params
+# => {"figure"=>{"name"=>"Doctor Who", "title_ids"=>["48"]},
+#  "title"=>{"name"=>""},
+#  "landmark"=>{"name"=>"", "year_completed"=>""},
+#  "submit"=>"Create New Figure"}
