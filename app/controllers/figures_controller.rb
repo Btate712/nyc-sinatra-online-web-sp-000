@@ -45,6 +45,7 @@ class FiguresController < ApplicationController
 
   patch '/figures/:id' do
     figure = Figure.find(params[:id])
+    binding.pry
     figure.name = params[:figure][:name]
 
     figure.titles = []
