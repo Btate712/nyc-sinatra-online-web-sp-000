@@ -47,7 +47,7 @@ class FiguresController < ApplicationController
     figure = Figure.find(params[:id])
     figure.name = params[:figure][:name]
     figure.save
-    
+
     figure.titles = []
     if params[:title][:name] != ""
       title = Title.create(params[:title][:name])
