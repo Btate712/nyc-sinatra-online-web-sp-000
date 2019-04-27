@@ -1,4 +1,10 @@
 class FiguresController < ApplicationController
+  get '/figures' do
+    @figures = Figure.all
+
+    erb :'figures/index'
+  end
+
   get '/figures/new' do
     @titles = Title.all
     @landmarks = Landmark.all
@@ -25,7 +31,7 @@ class FiguresController < ApplicationController
       landmark = Landmark.new(params[:landmark])
       @figure.landmarks << landmark
     end
-    
+
     redirect :"figure/#{@figure.id}"
   end
 end
