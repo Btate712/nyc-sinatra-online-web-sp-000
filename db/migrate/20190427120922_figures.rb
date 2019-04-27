@@ -19,5 +19,5 @@ class Figures < ActiveRecord::Migration
     end
   end
 
-  
+
 end
