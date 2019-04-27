@@ -72,6 +72,7 @@ class FiguresController < ApplicationController
     end
 
     figure.save
+    binding.pry
   end
 end
 
