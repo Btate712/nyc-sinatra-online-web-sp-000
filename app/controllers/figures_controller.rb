@@ -16,7 +16,7 @@ class FiguresController < ApplicationController
     @figure = Figure.new(params[:figure])
     @figure.save
 
-    if params[:title][:name]
+    if params[:title][:name] != ""
       binding.pry
     end
     redirect :"figure/#{@figure.id}"
