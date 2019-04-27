@@ -1,6 +1,6 @@
 class FiguresController < ApplicationController
   # add controller methods
-  get 'figure/new' do
+  get 'figures/new' do
     erb :'figures/new'
   end
 end
