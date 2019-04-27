@@ -11,5 +11,11 @@
       value="<% title.name %>" />
   <% end %>
 
+  <h2>Landmarks</h2>
+  <% @landmarks.each do |landmark| %>
+    <input type="checkbox" name="figure[landmark_ids][]" id="<% landmark.id %>"
+      value="<% landmark.name %>" />
+  <% end %>
+
   <input type="submit" name="submit" id="submit" value="Create New Figure" />
 </form>
