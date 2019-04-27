@@ -40,6 +40,10 @@ class FiguresController < ApplicationController
 
     redirect :"figure/#{@figure.id}"
   end
+
+  patch '/figures' do
+  
+  end
 end
 
 # params
