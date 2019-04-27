@@ -8,7 +8,7 @@
   <% @titles.each do |title| %>
     <input type="checkbox" name="figure[title_ids][]" id="title_<% title.id %>">
       <%= title.name %>
-    </input></br>
+    </input><br />
   <% end %>
 
   <h2>Create New Title:</h2>
@@ -17,8 +17,9 @@
 
   <h2>Landmarks</h2>
   <% @landmarks.each do |landmark| %>
-    <input type="checkbox" name="figure[landmark_ids][]" id="<% landmark.id %>"
-      value="<% landmark.name %>" />
+    <input type="checkbox" name="figure[landmark_ids][]" id="<% landmark.id %>">
+      <%= landmark.name %>
+    </input><br />
   <% end %>
 
   <h2>Create New Landmark:</h2>
