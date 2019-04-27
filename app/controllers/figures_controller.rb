@@ -71,6 +71,8 @@ class FiguresController < ApplicationController
         figure.landmarks << Landmark.find(landmark_id)
       end
     end
+
+    figure.save
   end
 end
 
