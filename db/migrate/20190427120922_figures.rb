@@ -14,7 +14,7 @@ class Figures < ActiveRecord::Migration
       t.integer :figure_id
     end
 
-    create_table :figure_title do |t|
+    create_table :figure_titles do |t|
       t.integer :title_id
       t.integer :figure_id
     end
