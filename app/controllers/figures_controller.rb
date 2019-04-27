@@ -21,6 +21,11 @@ class FiguresController < ApplicationController
       @figure.titles << title
     end
 
+    if params[:landmark][:name] != ""
+      landmark = Landmark.new(params[:landmark])
+      @figure.landmarks << landmark
+    end
+    
     redirect :"figure/#{@figure.id}"
   end
 end
