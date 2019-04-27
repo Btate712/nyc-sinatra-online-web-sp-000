@@ -28,6 +28,6 @@ class LandmarksController < ApplicationController
   patch '/landmarks/:id' do
     @landmark = Landmark.find(params[:id])
     binding.pry
-    @landmark.name = params[:]
+    
   end
 end
